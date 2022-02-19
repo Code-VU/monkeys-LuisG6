@@ -1,8 +1,26 @@
 def calculateTime():
     
     # This first line is provided for you
-    monkey_one = input("Is the first monkey smiling?:  ")
-    monkey_two = input("Is the second monkey smiling?: ")
+    try: 
+        monkey_one = input("Is the first monkey smiling?:  (y/n) ").lower()
+        monkey_two = input("Is the second monkey smiling?: (y/n) ").lower()
+
+        if monkey_one == "y" and monkey_two == "y":
+            print("Uh Oh! We're in trouble!")
+
+        elif monkey_one == "n" and monkey_two == "n":
+            print("Uh Oh! We're in trouble!")
+
+        elif monkey_one == "y" and monkey_two == "n":
+            print("Yay! We're going to have a good day!")
+
+        elif monkey_one == "n" and monkey_two == "y":   
+            print("Yay! We're going to have a good day!")
+
+        else:
+            print("Please enter y or n")
+    except:
+        print("Please enter y or n")
 
     # end assignment
 
